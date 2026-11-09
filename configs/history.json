@@ -1,0 +1,30 @@
+{
+  "window_id": "illustrative-window-1",
+  "now": 0.02,
+  "dispatch_at": 0.022,
+  "reads": {
+    "x": {"key": "payload", "version": "illustrative-v1", "start": 0, "end": 4},
+    "y": {"key": "payload", "version": "illustrative-v1", "start": 4, "end": 8},
+    "wide": {"key": "payload", "version": "illustrative-v1", "start": 0, "end": 8}
+  },
+  "queries": [
+    {"id": "q1", "atoms": ["x", "y"], "deadline": 0.05}
+  ],
+  "cpu": {"q1": 0.001},
+  "existing": [
+    {
+      "read": "wide",
+      "dispatched_at": 0.0,
+      "delivered_bytes": 4,
+      "consumers": ["q1"],
+      "curve": [[0.01, 4], [0.03, 8]]
+    }
+  ],
+  "completed": [
+    {"query": "q1", "atom": "x", "at": 0.01}
+  ],
+  "candidates": {
+    "x": [[0.008, 4]],
+    "y": [[0.008, 4]]
+  }
+}

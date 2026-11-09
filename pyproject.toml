@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dcr-core"
+version = "0.1.0"
+description = "Core scheduling and range-execution reference for DCR"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = []
+
+[project.optional-dependencies]
+s3 = ["boto3>=1.34"]
+
+[tool.setuptools.packages.find]
+include = ["dcr*"]
